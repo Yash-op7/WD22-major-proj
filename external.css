@@ -1,0 +1,442 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Finlandica&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Splash&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+        @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+        :root{
+            --text-color:WHITE;
+        }
+        *{
+            margin: 0px;
+        }
+        .header{
+            height: 150px;
+            width:100%;
+            /* background-color: red; */
+            /* border:1px black solid; */
+            color: var(--text-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search{
+            padding-left: 20px;    
+        }
+        .search-form{
+            border: 2px solid cyan;
+        }
+        .search-form button,input{
+            border: none;
+        }
+        .search-form input{
+            width:260px;
+            color: black;
+        }
+        .heading{
+            /*font-family: "Playball";
+            font-size:xxx-large;*/
+            display: inline-block;
+            position: relative;
+            left: 22%;
+            
+            /* background-color: white; */
+        }
+        .heading img{
+            width: 180px;
+            height: 180px;
+            color: white;
+            position:relative;
+            right:180px;
+        }
+
+        /* heading sass imported begin*/
+        body {
+            background-color: #232323;
+        }
+        .glitch {
+            width: 200px;
+            font-size: 2.125em;
+            font-family: Raleway;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            color: #fff;
+            letter-spacing: 5px;
+        }
+        .glitch:before, .glitch:after {
+            display: block;
+            content: attr(data-glitch);
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0.8;
+        }
+        .glitch:after {
+            color: #f0f;
+            z-index: -2;
+        }
+        .glitch:before {
+            color: #0ff;
+            z-index: -1;
+        }
+        .glitch:hover:before {
+            animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
+        }
+        .glitch:hover:after {
+            animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
+        }
+        @media only screen and (max-width: 400px) {
+            .glitch {
+                font-size: 3em;
+        }
+        }
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+            20% {
+                transform: translate(-5px, 5px);
+            }
+            40% {
+                transform: translate(-5px, -5px);
+            }
+            60% {
+                transform: translate(5px, 5px);
+            }
+            80% {
+                transform: translate(5px, -5px);
+            }
+            to {
+                transform: translate(0);
+        }
+        }
+        /*end*/
+
+        .login{
+            margin-right: 20px;
+            border:2px cyan solid;
+            font-size:large;
+            padding: 2px;
+            visibility: hidden;
+        }
+        .links-section{
+            
+            font-family: 'Open Sans Condensed', sans-serif;
+            background-color: #3C3C3C;
+            margin: 10px 0px 30px 0px;
+            display: flex;
+            justify-content: space-around;
+            /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+            background: linear-gradient(-45deg, #fb6031, #ff2377, #1c95c1, #22bb97);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+            
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        .links-section a{
+            text-decoration: none;
+            font-size: 1.3em;
+            /* color:var(--text-color); */
+            color:white;
+            
+        }
+
+        /* IMPORT OF BUTTON STYLE BEGIN */
+        .btn {
+            line-height: 50px;
+            height: 50px;
+            text-align: center;
+            width: 550px;
+            cursor: pointer;
+        }
+        .btn-two {
+            color: #FFF;
+            transition: all 2.5s;
+            position: relative;	
+        }
+        .btn-two a {
+            z-index: 2;	
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;	
+        }
+        .btn-two::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid rgba(255,255,255,0.8);
+            background-color: rgba(255,255,255,0.1);
+        }
+        .btn-two::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transition: all 0.5s;
+            border: 1px solid rgba(255,255,255,0.8);
+            background-color: rgba(255,255,255,0.1);
+        }
+        .btn-two:hover::before {
+        transform: rotate(-45deg);
+        background-color: rgba(255,255,255,0);
+        }
+        .btn-two:hover::after {
+        transform: rotate(45deg);
+        background-color: rgba(255,255,255,0);
+        }
+        /* IMPORT FINISHED */
+        /* .main{
+            border:1px black solid;
+            color: white;
+            display: grid;
+            justify-content: center;
+            align-content:space-around ;
+            padding: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .card{
+            border: 1px white solid;
+        } */
+
+        /* Movie tiles imported css begin */
+
+        .wrapper{
+            height:auto;
+            width: 100%;
+            /*display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;*/
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .movie-card{
+            margin: 10px;
+            height: 440px;
+            background: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+            cursor: pointer;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            overflow: hidden;
+            position: relative;
+        }
+        .movie-card img{
+            width: 100%;
+            height:100%;
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+        }
+        .descriptions{
+            position: absolute;
+            color:black;
+            top:0px;
+            left:0px;
+            background-color: rgba(255,255,255,.7);
+            width:100%;
+            height:100%;
+            transition: all .7s ease-in-out;
+            padding: 20px;
+            box-sizing: border-box;
+            clip-path: circle(0% at 100% 100%);
+        }
+        .movie-card:hover .descriptions{
+            left:0px;
+            transition: all .7s ease-in-out;
+            clip-path: circle(75%);
+        }
+        .movie-card:hover{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+            transform: scale(.97);
+        }
+        .movie-card:hover img{
+            transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+            transform: scale(1.6) rotate(20deg);
+            filter: blur(3px);
+        }
+        .movie-card h1{
+            color: #ff3838;
+            letter-spacing: 1px;
+            margin: 0px;
+        }
+        .movie-card p{
+            line-height: 24px;
+            height: 70%;
+        }
+        .movie-card button{
+            width: fit-content;
+            height: 40px;
+            cursor: pointer;
+            border-style: none;
+            background-color: #ff3838;
+            color:#fff;
+            font-size: 15px;
+            outline: none;
+            box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+            transition: all .5s ease-in-out;
+        }
+        .movie-card button:hover{
+            transform: scale(.95) translateX(-5px);
+            transition: all .5s ease-in-out;
+        }
+
+        /*imported css end*/
+
+        /*CSS FOR DROPDOWN*/
+        .dropdown{
+            position: relative;
+        }
+        .dropdown-btn{
+            /*no properties since i am using custom btn*/
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+            width: 100%;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .dropdown-content a:hover {background-color: black;color:white;}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        /*CSS for droptdown finish*/
+        /*CSS for search bar*/
+        .search {
+        width: 100%;
+        position: relative;
+        display: flex;
+        }
+        .searchTerm {
+        width: 100%;
+        border: 3px solid #00a6ff;
+        border-right: none;
+        padding: 5px;
+        height: 20px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #5c5c5c;
+        }
+        .searchTerm:focus{
+        color:black;
+        }
+        .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid #00a6ff;
+        background: #00a6ff;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+        }
+        .wrap{
+        width: 30%;
+        margin-right: 5%;
+        } 
+        .main{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color:white;
+        }
+        .main h2{
+            margin:20px;
+        }
+        .container{
+            /* border: 1px solid blue; */
+            position: relative;
+        }
+        .data{
+            /* height: 100%; */
+            color:white;
+            width: 49%;
+            /* border:1px dashed white; */
+            display: inline-block;
+        }
+        .data p,h1,h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .data>*{
+            margin: 20px 12px;
+        }
+        .video{
+            width: 50%;
+            display: inline-block;
+            
+        }
+        .video video{
+            width: 100%;
+            margin: 0px;
+        }
+        .genres{
+            margin: 0px;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            font-family:'Trebuchet MS';
+        }
+        
+        .genres a{
+            
+            /* border: 1px black solid;; */
+            padding:10%;
+            text-decoration: none;
+            /* text-align: center; */
+            color: white;
+        }
+        .genres>div{
+            word-wrap: break-word;
+        }
+        .watch-button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            position:relative;
+            top:35px;
+        }
+
